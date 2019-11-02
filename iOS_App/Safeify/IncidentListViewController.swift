@@ -44,7 +44,7 @@ extension IncidentListViewController:UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "IncidentListTableViewCell") as! IncidentListTableViewCell;
         
         cell.textView_title.text = Data.getData()[indexPath.row].Category;
-        cell.textView_description.text = Data.getData()[indexPath.row].Description;
+        cell.textView_description.text = Data.getData()[indexPath.row].Comment;
         
         var span = MKCoordinateSpan();
         span.latitudeDelta = 0.5;

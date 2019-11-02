@@ -143,7 +143,7 @@ extension IncidentDetailViewController:UITableViewDataSource {
         else if (indexPath.row == 3) { //description
             let cell = tableView.dequeueReusableCell(withIdentifier: "IncidentDetailDescriptionTableViewCell") as! IncidentDetailDescriptionTableViewCell;
             
-            cell.textView_description.text = data.Description;
+            cell.textView_description.text = data.Comment;
             
             return cell;
         }
