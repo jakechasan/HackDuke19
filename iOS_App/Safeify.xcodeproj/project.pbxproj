@@ -3,19 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C7D54EC236E172F0038DF9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D54EB236E172F0038DF9B /* GoogleService-Info.plist */; };
 		3CF56AA7236E07B800459C90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF56AA6236E07B800459C90 /* AppDelegate.swift */; };
 		3CF56AA9236E07B800459C90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF56AA8236E07B800459C90 /* SceneDelegate.swift */; };
 		3CF56AAB236E07B800459C90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF56AAA236E07B800459C90 /* ViewController.swift */; };
 		3CF56AAE236E07B800459C90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF56AAC236E07B800459C90 /* Main.storyboard */; };
 		3CF56AB0236E07BB00459C90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CF56AAF236E07BB00459C90 /* Assets.xcassets */; };
 		3CF56AB3236E07BB00459C90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF56AB1236E07BB00459C90 /* LaunchScreen.storyboard */; };
+		BD45A66E0FA04CE8F8229B01 /* Pods_Safeify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5A6D9217C054EA386F07F5 /* Pods_Safeify.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E5A6D9217C054EA386F07F5 /* Pods_Safeify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Safeify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39B083E0AE3ED7448041AFE3 /* Pods-Safeify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safeify.debug.xcconfig"; path = "Target Support Files/Pods-Safeify/Pods-Safeify.debug.xcconfig"; sourceTree = "<group>"; };
+		3C7D54EB236E172F0038DF9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3CF56AA3236E07B800459C90 /* Safeify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Safeify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF56AA6236E07B800459C90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CF56AA8236E07B800459C90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		3CF56AAF236E07BB00459C90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CF56AB2236E07BB00459C90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CF56AB4236E07BB00459C90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB3733BA7A5341526CBE1157 /* Pods-Safeify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safeify.release.xcconfig"; path = "Target Support Files/Pods-Safeify/Pods-Safeify.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD45A66E0FA04CE8F8229B01 /* Pods_Safeify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				3CF56AA5236E07B800459C90 /* Safeify */,
 				3CF56AA4236E07B800459C90 /* Products */,
+				77DB9FD70D93296FE3B718E6 /* Pods */,
+				A97395709A17BFD942657E2B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +65,7 @@
 		3CF56AA5236E07B800459C90 /* Safeify */ = {
 			isa = PBXGroup;
 			children = (
+				3C7D54EB236E172F0038DF9B /* GoogleService-Info.plist */,
 				3CF56AA6236E07B800459C90 /* AppDelegate.swift */,
 				3CF56AA8236E07B800459C90 /* SceneDelegate.swift */,
 				3CF56AAA236E07B800459C90 /* ViewController.swift */,
@@ -67,6 +77,23 @@
 			path = Safeify;
 			sourceTree = "<group>";
 		};
+		77DB9FD70D93296FE3B718E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39B083E0AE3ED7448041AFE3 /* Pods-Safeify.debug.xcconfig */,
+				CB3733BA7A5341526CBE1157 /* Pods-Safeify.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A97395709A17BFD942657E2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E5A6D9217C054EA386F07F5 /* Pods_Safeify.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CF56AB7236E07BB00459C90 /* Build configuration list for PBXNativeTarget "Safeify" */;
 			buildPhases = (
+				35D05ADF7AD7253F48649ADC /* [CP] Check Pods Manifest.lock */,
 				3CF56A9F236E07B800459C90 /* Sources */,
 				3CF56AA0236E07B800459C90 /* Frameworks */,
 				3CF56AA1236E07B800459C90 /* Resources */,
+				02CCBE882FE956156FFB092C /* [CP] Copy Pods Resources */,
+				4B0BB5138E7DC0F27842BE54 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +156,72 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CF56AB3236E07BB00459C90 /* LaunchScreen.storyboard in Resources */,
+				3C7D54EC236E172F0038DF9B /* GoogleService-Info.plist in Resources */,
 				3CF56AB0236E07BB00459C90 /* Assets.xcassets in Resources */,
 				3CF56AAE236E07B800459C90 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02CCBE882FE956156FFB092C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Safeify/Pods-Safeify-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Safeify/Pods-Safeify-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Safeify/Pods-Safeify-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35D05ADF7AD7253F48649ADC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Safeify-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B0BB5138E7DC0F27842BE54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Safeify/Pods-Safeify-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Safeify/Pods-Safeify-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Safeify/Pods-Safeify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3CF56A9F236E07B800459C90 /* Sources */ = {
@@ -282,6 +372,7 @@
 		};
 		3CF56AB8236E07BB00459C90 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39B083E0AE3ED7448041AFE3 /* Pods-Safeify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -294,11 +385,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = Pods;
 			};
 			name = Debug;
 		};
 		3CF56AB9236E07BB00459C90 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB3733BA7A5341526CBE1157 /* Pods-Safeify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -311,6 +404,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = Pods;
 			};
 			name = Release;
 		};

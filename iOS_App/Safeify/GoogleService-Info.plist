@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>303299889263-464p3ponudmajtd1cgclhmoloo29hha4.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.303299889263-464p3ponudmajtd1cgclhmoloo29hha4</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDpU8sb1rZ-Skf51vhsni7n0tIKMt-VH1E</string>
+	<key>GCM_SENDER_ID</key>
+	<string>303299889263</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>edu.duke.safeify</string>
+	<key>PROJECT_ID</key>
+	<string>safeify</string>
+	<key>STORAGE_BUCKET</key>
+	<string>safeify.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:303299889263:ios:954942512de6a6323fa59a</string>
+	<key>DATABASE_URL</key>
+	<string>https://safeify.firebaseio.com</string>
+</dict>
+</plist>
