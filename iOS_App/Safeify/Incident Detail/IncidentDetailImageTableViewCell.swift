@@ -1,5 +1,5 @@
 //
-//  IncidentDetailDescriptionTableViewCell.swift
+//  IncidentDetailImageTableViewCell.swift
 //  Safeify
 //
 //  Created by Jake Chasan on 11/2/19.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class IncidentDetailDescriptionTableViewCell: UITableViewCell {
+class IncidentDetailImageTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var textView_description: UITextView!
+    @IBOutlet weak var cell_image: UIImageView!
     
     override func prepareForReuse() {
         super.prepareForReuse();
         
-        textView_description.text = "";
+        self.cell_image.image = UIImage();
     }
 }

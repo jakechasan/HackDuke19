@@ -24,6 +24,10 @@ class IncidentDetailViewController: UIViewController {
         
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
+        self.tableView.tableFooterView = UIView();
+        self.tableView.allowsSelection = false;
+        
+        configureMap();
     }
     
     override func viewWillLayoutSubviews() {
@@ -137,16 +141,16 @@ extension IncidentDetailViewController:UITableViewDataSource {
             return cell;
         }
         else if (indexPath.row == 3) { //description
-            let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "nil");
+            let cell = tableView.dequeueReusableCell(withIdentifier: "IncidentDetailDescriptionTableViewCell") as! IncidentDetailDescriptionTableViewCell;
             
-            cell.textLabel?.text = "Coming Soon";
+            cell.textView_description.text = data.Description;
             
             return cell;
         }
         else if (indexPath.row == 4) { //image
-            let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "nil");
+            let cell = tableView.dequeueReusableCell(withIdentifier: "IncidentDetailImageTableViewCell") as! IncidentDetailImageTableViewCell;
             
-            cell.textLabel?.text = "Coming Soon";
+            cell.cell_image.downloadImageFrom(link: data.Img, contentMode: .scaleAspectFit);
             
             return cell;
         }
@@ -154,6 +158,4 @@ extension IncidentDetailViewController:UITableViewDataSource {
             return UITableViewCell();
         }
     }
-    
-    
 }

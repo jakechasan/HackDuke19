@@ -41,3 +41,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
+//From: https://stackoverflow.com/questions/28694645/how-to-implement-lazy-loading-of-images-in-table-view-using-swift
+extension UIImageView {
+    func downloadImageFrom(link:String, contentMode: UIView.ContentMode) {
+        URLSession.shared.dataTask(with: URL(string: link)!) { (data, response, error) in
+            
+            DispatchQueue.main.async {
+                self.contentMode = contentMode;
+                if let data = data { self.image = UIImage(data: data) }
+            }
+            
+        }.resume();
+    }
+}

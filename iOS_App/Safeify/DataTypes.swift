@@ -21,7 +21,7 @@ struct MarkerItem: Codable {
 class Data {
     static func getData()-> [MarkerItem] {
         let sampleData:[MarkerItem] = [
-            MarkerItem(Img: "https://news.images.itv.com/image/file/908885/stream_img.jpg", Lat: 36.0014, Long: 78.9382, Category: "Utility Poll", Timestamp: "2016-11-01T21:10:56Z", Description: "This utility poll is on fire!")
+            MarkerItem(Img: "https://news.images.itv.com/image/file/908885/stream_img.jpg", Lat: 36.0014, Long: 78.9382, Category: "Electrical Fault", Timestamp: "2016-11-01T21:10:56Z", Description: "This utility poll is on fire!")
         ]
         
         return sampleData;
