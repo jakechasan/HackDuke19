@@ -12,6 +12,7 @@ import MapKit
 class IncidentDetailViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var tableView: UITableView!
     
     var data:MarkerItem!;
     
@@ -19,9 +20,19 @@ class IncidentDetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        self.title = "\(data.Category) Incident Detail";
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews();
+        
         mapView.subviews[1].isHidden = true;
         mapView.subviews[2].isHidden = true;
-        
+    }
+    
+    //MARK: MAP Section
+    
+    func configureMap(){
         //map setup
         var span = MKCoordinateSpan();
         span.latitudeDelta = 0.5;
@@ -38,7 +49,7 @@ class IncidentDetailViewController: UIViewController {
         
         mapView.mapType = .satellite;
         
-        mapView.layer.cornerRadius = 5;
+        mapView.layer.cornerRadius = 25;
     }
     
     @IBAction func changeMapType(_ sender: UIBarButtonItem) {
@@ -64,3 +75,4 @@ class IncidentDetailViewController: UIViewController {
     }
 }
 
+//MARK: Table View Section
