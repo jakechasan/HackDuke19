@@ -29,6 +29,7 @@ enum Icon: String {
 }
 
 class Data {
+    static var username = "jakechasan";
     
     static func getImageForData(_ item:MarkerItem)->Icon{
         let types:[String:Icon] = [

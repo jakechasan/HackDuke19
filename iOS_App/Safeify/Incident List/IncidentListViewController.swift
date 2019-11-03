@@ -20,6 +20,20 @@ class IncidentListViewController: UIViewController {
         tableView.dataSource = self;
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
+        
+        self.tableView.reloadData();
+    }
+    
+    @IBAction func tapped_viewProfile(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "User Information", message: "Username: \(Data.username)", preferredStyle: .alert);
+        
+        alert.addAction(UIAlertAction(title: "Done", style: .cancel, handler: nil));
+        
+        self.present(alert, animated: true, completion: nil);
+    }
+    
     @IBAction func tapped_addNewReport(_ sender: UIBarButtonItem) {
         
         let viewController = storyboard?.instantiateViewController(identifier: "IncidentReportTableViewController") as! IncidentReportTableViewController;

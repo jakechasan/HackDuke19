@@ -137,6 +137,11 @@
                         <viewLayoutGuide key="safeArea" id="FK5-q0-lTh"/>
                     </view>
                     <navigationItem key="navigationItem" title="Latest Incidents" id="jof-IO-z1r">
+                        <barButtonItem key="leftBarButtonItem" image="person.circle" catalog="system" id="J4I-jN-qMQ">
+                            <connections>
+                                <action selector="tapped_viewProfile:" destination="Uiv-Dk-l7q" id="MDf-TK-JT1"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dUd-Ut-lcm">
                             <connections>
                                 <action selector="tapped_addNewReport:" destination="Uiv-Dk-l7q" id="8sZ-I3-SvG"/>
@@ -384,5 +389,6 @@
     <resources>
         <image name="google-logo-white.png" width="512" height="176"/>
         <image name="map" catalog="system" width="64" height="56"/>
+        <image name="person.circle" catalog="system" width="64" height="60"/>
     </resources>
 </document>
