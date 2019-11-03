@@ -29,6 +29,16 @@ enum Icon: String {
 }
 
 class Data {
+    static let typesStrings = [
+        "Plumbing Fault",
+        "Electric Fault",
+        "Ground Fault",
+        "Structural Fault",
+        "Biohazard",
+        "Fire Hazard",
+        "Other"
+    ];
+    
     static let types:[String:Icon] = [
         "Plumbing Fault":Icon.water,
         "Electric Fault":Icon.energy,

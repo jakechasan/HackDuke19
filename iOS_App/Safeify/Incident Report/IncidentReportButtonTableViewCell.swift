@@ -23,7 +23,7 @@ class IncidentReportButtonTableViewCell: UITableViewCell {
         super.prepareForReuse();
         
         cell_title.text = "";
-        cell_button.titleLabel?.text = "";
+        cell_button.setTitle("", for: .normal);
         buttonTappedAction = nil;
     }
 }

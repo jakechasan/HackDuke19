@@ -49,19 +49,19 @@ class IncidentReportTableViewController: UITableViewController {
             if(value == ""){
                 value = "Select Category";
             }
-            
-            cell.cell_button.titleLabel?.text = value;
-            
+            cell.cell_button.setTitle(value, for: .normal);
             
             cell.buttonTappedAction = {
                 let actionSheet = UIAlertController(title: "Select Category", message: nil, preferredStyle: .actionSheet);
                 
-                for type in Data.types {
-                    let action = UIAlertAction(title: type.key, style: .default) { (action) in
-                        self.newMarker.Category = type.key;
+                for type in Data.typesStrings {
+                    let action = UIAlertAction(title: type, style: .default) { (action) in
+                        self.newMarker.Category = type;
+                        
+                        cell.cell_button.setTitle(self.newMarker.Category, for: .normal);
                     };
                     
-                    action.setValue((self.newMarker.Category == type.key), forKey: "checked")
+                    action.setValue((self.newMarker.Category == type), forKey: "checked")
                     
                     actionSheet.addAction(action);
                 }
