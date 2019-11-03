@@ -59,7 +59,7 @@ class Data {
     
     static func getData()-> [MarkerItem] {
         let sampleData:[MarkerItem] = [
-            MarkerItem(Category: "Electric Fault", Comment: "This utility poll is on fire!", Img: "https://news.images.itv.com/image/file/908885/stream_img.jpg", Lat: 78.9382, Long: 36.0014, Timestamp: "2016-11-01T21:10:56Z", User: "jakechasan")
+            MarkerItem(Category: "Electric Fault", Comment: "This utility pole is on fire!", Img: "https://news.images.itv.com/image/file/908885/stream_img.jpg", Lat: 78.9382, Long: 36.0014, Timestamp: "2016-11-01T21:10:56Z", User: "jakechasan")
         ]
         
         return sampleData;
