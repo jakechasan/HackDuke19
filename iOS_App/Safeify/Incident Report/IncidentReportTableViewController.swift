@@ -149,13 +149,28 @@ class IncidentReportTableViewController: UITableViewController {
         
         if(newMarker.Category == ""){
             let alertController = UIAlertController(title: "Please select a category", message: nil, preferredStyle: .alert);
-            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil));
             self.present(alertController, animated: true, completion: nil);
         }
-        
-        AppData.uploadNewMarker(marker: newMarker);
-        
-        self.navigationController?.dismiss(animated: true, completion: nil);
+        else if(newMarker.Comment == ""){
+            let alertController = UIAlertController(title: "Please enter a comment", message: nil, preferredStyle: .alert);
+            self.present(alertController, animated: true, completion: nil);
+        }
+        else if(newMarker.Img == ""){
+            let alertController = UIAlertController(title: "Please select an image", message: nil, preferredStyle: .alert);
+            self.present(alertController, animated: true, completion: nil);
+        }
+        else{
+            let formatter = ISO8601DateFormatter();
+            let timestamp = Date();
+            let timestampString = formatter.string(from: timestamp);
+            newMarker.Timestamp = timestampString;
+            
+            newMarker.User = AppData.username;
+            
+            AppData.uploadNewMarker(marker: newMarker);
+            
+            self.navigationController?.dismiss(animated: true, completion: nil);
+        }
     }
     
     @IBAction func tapped_buttonCancel(_ sender: UIBarButtonItem) {
