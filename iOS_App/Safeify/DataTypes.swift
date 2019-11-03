@@ -30,23 +30,23 @@ enum Icon: String {
 
 class Data {
     
-    func getImageForData(type:String)->Icon{
+    static func getImageForData(_ item:MarkerItem)->Icon{
         let types:[String:Icon] = [
-            "Plumbing fault":Icon.water,
-            "Electric fault":Icon.energy,
-            "Ground fault":Icon.earth,
-            "Structural fault":Icon.structure,
+            "Plumbing Fault":Icon.water,
+            "Electric Fault":Icon.energy,
+            "Ground Fault":Icon.earth,
+            "Structural Fault":Icon.structure,
             "Biohazard":Icon.biohazard,
-            "Fire hazard":Icon.fire,
+            "Fire Hazard":Icon.fire,
             "Other":Icon.other
         ];
         
-        return types[type] ?? Icon.other;
+        return types[item.Category] ?? Icon.other;
     }
     
     static func getData()-> [MarkerItem] {
         let sampleData:[MarkerItem] = [
-            MarkerItem(Category: "Electrical fault", Comment: "This utility poll is on fire!", Img: "https://news.images.itv.com/image/file/908885/stream_img.jpg", Lat: 78.9382, Long: 36.0014, Timestamp: "2016-11-01T21:10:56Z", User: "jakechasan")
+            MarkerItem(Category: "Electric Fault", Comment: "This utility poll is on fire!", Img: "https://news.images.itv.com/image/file/908885/stream_img.jpg", Lat: 78.9382, Long: 36.0014, Timestamp: "2016-11-01T21:10:56Z", User: "jakechasan")
         ]
         
         return sampleData;

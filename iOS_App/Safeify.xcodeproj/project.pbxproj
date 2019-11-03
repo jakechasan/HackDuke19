@@ -73,6 +73,15 @@
 			path = "Incident Detail";
 			sourceTree = "<group>";
 		};
+		3CA85EBE236E4F88009761E7 /* Incident List */ = {
+			isa = PBXGroup;
+			children = (
+				3C7D54EF236E1B2C0038DF9B /* IncidentListViewController.swift */,
+				3CA85EA9236E1F8E009761E7 /* IncidentListTableViewCell.swift */,
+			);
+			path = "Incident List";
+			sourceTree = "<group>";
+		};
 		3CF56A9A236E07B800459C90 = {
 			isa = PBXGroup;
 			children = (
@@ -97,9 +106,8 @@
 				3C7D54EB236E172F0038DF9B /* GoogleService-Info.plist */,
 				3CF56AA6236E07B800459C90 /* AppDelegate.swift */,
 				3CF56AA8236E07B800459C90 /* SceneDelegate.swift */,
+				3CA85EBE236E4F88009761E7 /* Incident List */,
 				3CA85EB1236E35C0009761E7 /* Incident Detail */,
-				3C7D54EF236E1B2C0038DF9B /* IncidentListViewController.swift */,
-				3CA85EA9236E1F8E009761E7 /* IncidentListTableViewCell.swift */,
 				3C7D54ED236E193E0038DF9B /* DataTypes.swift */,
 				3CF56AAC236E07B800459C90 /* Main.storyboard */,
 				3CF56AAF236E07BB00459C90 /* Assets.xcassets */,

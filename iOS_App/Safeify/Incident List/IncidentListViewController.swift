@@ -32,7 +32,6 @@ extension IncidentListViewController:UITableViewDelegate {
     }
 }
 
-
 extension IncidentListViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -42,6 +41,8 @@ extension IncidentListViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "IncidentListTableViewCell") as! IncidentListTableViewCell;
+        
+        cell.imageView_icon.image = UIImage(named: Data.getImageForData(Data.getData()[indexPath.row]).rawValue);
         
         cell.textView_title.text = Data.getData()[indexPath.row].Category;
         cell.textView_description.text = Data.getData()[indexPath.row].Comment;
