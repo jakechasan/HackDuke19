@@ -10,6 +10,7 @@ import UIKit
 
 class IncidentReportTextInputTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var cell_titleLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     
     override func awakeFromNib() {

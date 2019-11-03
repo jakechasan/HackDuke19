@@ -46,6 +46,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="cell_titleLabel" destination="XCM-AL-qqV" id="PLU-sZ-dwD"/>
                                     <outlet property="textField" destination="31n-BK-aBL" id="q2R-NW-aQd"/>
                                 </connections>
                             </tableViewCell>

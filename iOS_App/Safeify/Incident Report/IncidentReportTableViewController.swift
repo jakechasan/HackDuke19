@@ -21,12 +21,15 @@ class IncidentReportTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1;
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        /*
+         1. Category
+         2. Comment
+         */
+        
         return 2;
     }
     
@@ -34,6 +37,7 @@ class IncidentReportTableViewController: UITableViewController {
         if(indexPath.row == 0) {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "IncidentReportTextInputTableViewCell") as! IncidentReportTextInputTableViewCell;
             
+            cell.cell_titleLabel.text = "Comment";
             cell.textField.text = "";
             
             return cell;
