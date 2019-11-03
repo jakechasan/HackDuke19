@@ -236,11 +236,18 @@
                                 <action selector="tapped_viewProfile:" destination="Uiv-Dk-l7q" id="MDf-TK-JT1"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dUd-Ut-lcm">
-                            <connections>
-                                <action selector="tapped_addNewReport:" destination="Uiv-Dk-l7q" id="8sZ-I3-SvG"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="dUd-Ut-lcm">
+                                <connections>
+                                    <action selector="tapped_addNewReport:" destination="Uiv-Dk-l7q" id="8sZ-I3-SvG"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="arrow.up.arrow.down" catalog="system" id="tdU-Rn-r1r">
+                                <connections>
+                                    <action selector="tapped_orderApp:" destination="Uiv-Dk-l7q" id="1rD-ku-6dw"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="E75-nj-GT5" id="vLu-Nw-xid"/>
@@ -481,6 +488,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.up.arrow.down" catalog="system" width="64" height="48"/>
         <image name="checkmark.circle" catalog="system" width="64" height="60"/>
         <image name="google-logo-white.png" width="512" height="176"/>
         <image name="map" catalog="system" width="64" height="56"/>

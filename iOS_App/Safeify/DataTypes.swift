@@ -53,6 +53,7 @@ class AppData {
     ];
     
     static var markers:[MarkerItem] = [];
+    static var newestFirst = true;
     
     static var username = "jakechasan";
     
@@ -147,11 +148,34 @@ class AppData {
                 
                 print("Number of items loaded: \(markers.count)");
                 
+                sortData(oldest: true);
+                
                 callback();
             }
             else{
                 print("there has been an error");
             }
+        }
+    }
+    
+    static func sortData(oldest:Bool){
+        if(markers.count > 0){
+            markers.sort { (a, b) -> Bool in
+                let formatter = ISO8601DateFormatter();
+                let aDate = formatter.date(from: a.Timestamp);
+                let bDate = formatter.date(from: b.Timestamp);
+                
+                let result = aDate?.compare(bDate ?? Date());
+                
+                if(oldest){
+                    return result?.rawValue ?? 0 > 1;
+                }
+                else{
+                    return result?.rawValue ?? 0 < 1;
+                }
+            }
+            
+            newestFirst = !oldest;
         }
     }
 }

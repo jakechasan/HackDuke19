@@ -71,6 +71,35 @@ class IncidentListViewController: UIViewController {
         
         self.present(navigationController, animated: true, completion: nil);
     }
+    
+    @IBAction func tapped_orderApp(_ sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: "Change Order", message: nil, preferredStyle: .actionSheet);
+        
+        let action_oldest = UIAlertAction(title: "Oldest First", style: .default, handler: { (action) in
+            
+            AppData.sortData(oldest: true);
+            self.tableView.reloadData();
+            
+        });
+        action_oldest.setValue(!AppData.newestFirst, forKey: "checked")
+
+        alertController.addAction(action_oldest);
+        
+        let action_newest = UIAlertAction(title: "Newest First", style: .default, handler: { (action) in
+            
+            AppData.sortData(oldest: false);
+            self.tableView.reloadData();
+            
+        });
+        action_newest.setValue(AppData.newestFirst, forKey: "checked")
+        alertController.addAction(action_newest);
+        
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil));
+        
+        alertController.popoverPresentationController?.barButtonItem = sender;
+        
+        self.present(alertController, animated: true, completion: nil);
+    }
 }
 
 extension IncidentListViewController:UITableViewDelegate {
