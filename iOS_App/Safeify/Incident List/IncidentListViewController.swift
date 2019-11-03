@@ -8,14 +8,19 @@
 
 import UIKit
 import MapKit
+import Firebase
+import FirebaseDatabase
 
 class IncidentListViewController: UIViewController {
+    
+   var ref: DatabaseReference!
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+         ref = Database.database().reference()
+        ref.child("M2").setValue(["Category":"Fire Hazard", "Comment":"My Mixtape yo gang gang", "img": "imageaddr","Lat":0.0,"Lon":0.0,"Timestamp":"1997-07-16T19:20+01:00","User":"Aparimeya"])
         tableView.delegate = self;
         tableView.dataSource = self;
     }
