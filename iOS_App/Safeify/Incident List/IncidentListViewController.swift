@@ -103,11 +103,13 @@ extension IncidentListViewController:UITableViewDataSource {
         span.latitudeDelta = 0.5;
         span.longitudeDelta = 0.5;
         
-        let coordinate = CLLocationCoordinate2D(latitude: AppData.markers[indexPath.row].Lat, longitude: AppData.markers[indexPath.row].Long);
+        let offsetCoordinate = CLLocationCoordinate2D(latitude: AppData.markers[indexPath.row].Lat + 0.1, longitude: AppData.markers[indexPath.row].Long);
         
-        let region = MKCoordinateRegion(center: coordinate, span: span);
+        let region = MKCoordinateRegion(center: offsetCoordinate, span: span);
         cell.mapView.setRegion(region, animated: false);
         
+        let coordinate = CLLocationCoordinate2D(latitude: AppData.markers[indexPath.row].Lat, longitude: AppData.markers[indexPath.row].Long);
+
         let annotation = MKPointAnnotation();
         annotation.coordinate = coordinate;
         cell.mapView.addAnnotation(annotation);
