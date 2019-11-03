@@ -20,7 +20,21 @@ class IncidentListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
          ref = Database.database().reference()
-        ref.child("M2").setValue(["Category":"Fire Hazard", "Comment":"My Mixtape yo gang gang", "img": "imageaddr","Lat":0.0,"Lon":0.0,"Timestamp":"1997-07-16T19:20+01:00","User":"Aparimeya"])
+        ref.child("M2").setValue(["Category":"Fire Hazard", "Comment":"My Mixtape yo gang gang", "Img": "imageaddr","Lat":0.0,"Lon":0.0,"Timestamp":"1997-07-16T19:20+01:00","User":"Aparimeya"])
+        ref.child("M2").observeSingleEvent(of: .value) { ( snapshot) in
+            let name = snapshot.value as? [String:Any]
+            print(name)
+            
+            let comment = name!["Comment"] as! String;
+            let category = name!["Category"] as! String;
+            let img = name!["Img"] as! String;
+            let lat = name!["Lat"] as! Double;
+            let long = name!["Lon"] as! Double;
+            let timestamp = name!["Timestamp"] as! String;
+            let user = name!["User"] as! String;
+            
+            let newMarker = MarkerItem(Category: category, Comment: comment, Img: img, Lat: lat, Long: long, Timestamp: timestamp, User: user)
+        }
         tableView.delegate = self;
         tableView.dataSource = self;
     }
