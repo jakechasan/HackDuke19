@@ -3,167 +3,137 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C2E44FC236E52830010BA86 /* IncidentReportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2E44FB236E52830010BA86 /* IncidentReportTableViewController.swift */; };
-		3C2E44FE236E56CD0010BA86 /* IncidentReportButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2E44FD236E56CD0010BA86 /* IncidentReportButtonTableViewCell.swift */; };
-		3C2E4500236E57740010BA86 /* IncidentReportTextInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2E44FF236E57740010BA86 /* IncidentReportTextInputTableViewCell.swift */; };
-		3C7D54EC236E172F0038DF9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D54EB236E172F0038DF9B /* GoogleService-Info.plist */; };
-		3C7D54EE236E193E0038DF9B /* DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7D54ED236E193E0038DF9B /* DataTypes.swift */; };
-		3C7D54F0236E1B2C0038DF9B /* IncidentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7D54EF236E1B2C0038DF9B /* IncidentListViewController.swift */; };
-		3CA85EAA236E1F8E009761E7 /* IncidentListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA85EA9236E1F8E009761E7 /* IncidentListTableViewCell.swift */; };
-		3CA85EAC236E2F54009761E7 /* google-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CA85EAB236E2F54009761E7 /* google-logo.png */; };
-		3CA85EAE236E2FF8009761E7 /* google-logo-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CA85EAD236E2FF8009761E7 /* google-logo-white.png */; };
-		3CA85EB3236E35C0009761E7 /* IncidentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA85EB2236E35C0009761E7 /* IncidentDetailViewController.swift */; };
-		3CA85EB7236E35F7009761E7 /* IncidentDetailDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA85EB6236E35F7009761E7 /* IncidentDetailDescriptionTableViewCell.swift */; };
-		3CA85EB9236E4351009761E7 /* stream_img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3CA85EB8236E4351009761E7 /* stream_img.jpg */; };
-		3CA85EBB236E43BA009761E7 /* IncidentDetailImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA85EBA236E43BA009761E7 /* IncidentDetailImageTableViewCell.swift */; };
-		3CF56AA7236E07B800459C90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF56AA6236E07B800459C90 /* AppDelegate.swift */; };
-		3CF56AA9236E07B800459C90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF56AA8236E07B800459C90 /* SceneDelegate.swift */; };
-		3CF56AAE236E07B800459C90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF56AAC236E07B800459C90 /* Main.storyboard */; };
-		3CF56AB0236E07BB00459C90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CF56AAF236E07BB00459C90 /* Assets.xcassets */; };
-		3CF56AB3236E07BB00459C90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF56AB1236E07BB00459C90 /* LaunchScreen.storyboard */; };
-		BD45A66E0FA04CE8F8229B01 /* Pods_Safeify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5A6D9217C054EA386F07F5 /* Pods_Safeify.framework */; };
+		3CE45045236E5CEC002AFA35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE45044236E5CEC002AFA35 /* AppDelegate.swift */; };
+		3CE45047236E5CEC002AFA35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE45046236E5CEC002AFA35 /* SceneDelegate.swift */; };
+		3CE4504C236E5CEC002AFA35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE4504A236E5CEC002AFA35 /* Main.storyboard */; };
+		3CE4504E236E5CEE002AFA35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE4504D236E5CEE002AFA35 /* Assets.xcassets */; };
+		3CE45051236E5CEE002AFA35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE4504F236E5CEE002AFA35 /* LaunchScreen.storyboard */; };
+		3CE45066236E5D5D002AFA35 /* stream_img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3CE45058236E5D5D002AFA35 /* stream_img.jpg */; };
+		3CE45067236E5D5D002AFA35 /* google-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CE45059236E5D5D002AFA35 /* google-logo.png */; };
+		3CE45068236E5D5D002AFA35 /* IncidentDetailImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4505B236E5D5D002AFA35 /* IncidentDetailImageTableViewCell.swift */; };
+		3CE45069236E5D5D002AFA35 /* IncidentDetailDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4505C236E5D5D002AFA35 /* IncidentDetailDescriptionTableViewCell.swift */; };
+		3CE4506A236E5D5D002AFA35 /* IncidentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4505D236E5D5D002AFA35 /* IncidentDetailViewController.swift */; };
+		3CE4506B236E5D5D002AFA35 /* google-logo-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CE4505E236E5D5D002AFA35 /* google-logo-white.png */; };
+		3CE4506C236E5D5D002AFA35 /* IncidentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE45060236E5D5D002AFA35 /* IncidentListViewController.swift */; };
+		3CE4506D236E5D5D002AFA35 /* IncidentListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE45061236E5D5D002AFA35 /* IncidentListTableViewCell.swift */; };
+		3CE4506E236E5D5D002AFA35 /* IncidentReportTextInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE45063236E5D5D002AFA35 /* IncidentReportTextInputTableViewCell.swift */; };
+		3CE4506F236E5D5D002AFA35 /* IncidentReportButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE45064236E5D5D002AFA35 /* IncidentReportButtonTableViewCell.swift */; };
+		3CE45070236E5D5D002AFA35 /* IncidentReportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE45065236E5D5D002AFA35 /* IncidentReportTableViewController.swift */; };
+		3CE45072236E5D85002AFA35 /* DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE45071236E5D85002AFA35 /* DataTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1E5A6D9217C054EA386F07F5 /* Pods_Safeify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Safeify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		39B083E0AE3ED7448041AFE3 /* Pods-Safeify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safeify.debug.xcconfig"; path = "Target Support Files/Pods-Safeify/Pods-Safeify.debug.xcconfig"; sourceTree = "<group>"; };
-		3C2E44FB236E52830010BA86 /* IncidentReportTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentReportTableViewController.swift; sourceTree = "<group>"; };
-		3C2E44FD236E56CD0010BA86 /* IncidentReportButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentReportButtonTableViewCell.swift; sourceTree = "<group>"; };
-		3C2E44FF236E57740010BA86 /* IncidentReportTextInputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentReportTextInputTableViewCell.swift; sourceTree = "<group>"; };
-		3C7D54EB236E172F0038DF9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3C7D54ED236E193E0038DF9B /* DataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypes.swift; sourceTree = "<group>"; };
-		3C7D54EF236E1B2C0038DF9B /* IncidentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentListViewController.swift; sourceTree = "<group>"; };
-		3CA85EA9236E1F8E009761E7 /* IncidentListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentListTableViewCell.swift; sourceTree = "<group>"; };
-		3CA85EAB236E2F54009761E7 /* google-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google-logo.png"; sourceTree = "<group>"; };
-		3CA85EAD236E2FF8009761E7 /* google-logo-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google-logo-white.png"; sourceTree = "<group>"; };
-		3CA85EB2236E35C0009761E7 /* IncidentDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncidentDetailViewController.swift; sourceTree = "<group>"; };
-		3CA85EB6236E35F7009761E7 /* IncidentDetailDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentDetailDescriptionTableViewCell.swift; sourceTree = "<group>"; };
-		3CA85EB8236E4351009761E7 /* stream_img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stream_img.jpg; sourceTree = "<group>"; };
-		3CA85EBA236E43BA009761E7 /* IncidentDetailImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentDetailImageTableViewCell.swift; sourceTree = "<group>"; };
-		3CF56AA3236E07B800459C90 /* Safeify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Safeify.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CF56AA6236E07B800459C90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3CF56AA8236E07B800459C90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3CF56AAD236E07B800459C90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3CF56AAF236E07BB00459C90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3CF56AB2236E07BB00459C90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3CF56AB4236E07BB00459C90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB3733BA7A5341526CBE1157 /* Pods-Safeify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safeify.release.xcconfig"; path = "Target Support Files/Pods-Safeify/Pods-Safeify.release.xcconfig"; sourceTree = "<group>"; };
+		3CE45041236E5CEC002AFA35 /* Safeify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Safeify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CE45044236E5CEC002AFA35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3CE45046236E5CEC002AFA35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3CE4504B236E5CEC002AFA35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3CE4504D236E5CEE002AFA35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3CE45050236E5CEE002AFA35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3CE45052236E5CEE002AFA35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CE45058236E5D5D002AFA35 /* stream_img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stream_img.jpg; sourceTree = "<group>"; };
+		3CE45059236E5D5D002AFA35 /* google-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google-logo.png"; sourceTree = "<group>"; };
+		3CE4505B236E5D5D002AFA35 /* IncidentDetailImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncidentDetailImageTableViewCell.swift; sourceTree = "<group>"; };
+		3CE4505C236E5D5D002AFA35 /* IncidentDetailDescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncidentDetailDescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		3CE4505D236E5D5D002AFA35 /* IncidentDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncidentDetailViewController.swift; sourceTree = "<group>"; };
+		3CE4505E236E5D5D002AFA35 /* google-logo-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google-logo-white.png"; sourceTree = "<group>"; };
+		3CE45060236E5D5D002AFA35 /* IncidentListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncidentListViewController.swift; sourceTree = "<group>"; };
+		3CE45061236E5D5D002AFA35 /* IncidentListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncidentListTableViewCell.swift; sourceTree = "<group>"; };
+		3CE45063236E5D5D002AFA35 /* IncidentReportTextInputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncidentReportTextInputTableViewCell.swift; sourceTree = "<group>"; };
+		3CE45064236E5D5D002AFA35 /* IncidentReportButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncidentReportButtonTableViewCell.swift; sourceTree = "<group>"; };
+		3CE45065236E5D5D002AFA35 /* IncidentReportTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncidentReportTableViewController.swift; sourceTree = "<group>"; };
+		3CE45071236E5D85002AFA35 /* DataTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTypes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3CF56AA0236E07B800459C90 /* Frameworks */ = {
+		3CE4503E236E5CEC002AFA35 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD45A66E0FA04CE8F8229B01 /* Pods_Safeify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3C2E44FA236E525E0010BA86 /* Incident Report */ = {
+		3CE45038236E5CEC002AFA35 = {
 			isa = PBXGroup;
 			children = (
-				3C2E44FB236E52830010BA86 /* IncidentReportTableViewController.swift */,
-				3C2E44FF236E57740010BA86 /* IncidentReportTextInputTableViewCell.swift */,
-				3C2E44FD236E56CD0010BA86 /* IncidentReportButtonTableViewCell.swift */,
-			);
-			path = "Incident Report";
-			sourceTree = "<group>";
-		};
-		3CA85EB1236E35C0009761E7 /* Incident Detail */ = {
-			isa = PBXGroup;
-			children = (
-				3CA85EB2236E35C0009761E7 /* IncidentDetailViewController.swift */,
-				3CA85EBA236E43BA009761E7 /* IncidentDetailImageTableViewCell.swift */,
-				3CA85EB6236E35F7009761E7 /* IncidentDetailDescriptionTableViewCell.swift */,
-			);
-			path = "Incident Detail";
-			sourceTree = "<group>";
-		};
-		3CA85EBE236E4F88009761E7 /* Incident List */ = {
-			isa = PBXGroup;
-			children = (
-				3C7D54EF236E1B2C0038DF9B /* IncidentListViewController.swift */,
-				3CA85EA9236E1F8E009761E7 /* IncidentListTableViewCell.swift */,
-			);
-			path = "Incident List";
-			sourceTree = "<group>";
-		};
-		3CF56A9A236E07B800459C90 = {
-			isa = PBXGroup;
-			children = (
-				3CF56AA5236E07B800459C90 /* Safeify */,
-				3CF56AA4236E07B800459C90 /* Products */,
-				77DB9FD70D93296FE3B718E6 /* Pods */,
-				A97395709A17BFD942657E2B /* Frameworks */,
+				3CE45043236E5CEC002AFA35 /* Safeify */,
+				3CE45042236E5CEC002AFA35 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3CF56AA4236E07B800459C90 /* Products */ = {
+		3CE45042236E5CEC002AFA35 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3CF56AA3236E07B800459C90 /* Safeify.app */,
+				3CE45041236E5CEC002AFA35 /* Safeify.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3CF56AA5236E07B800459C90 /* Safeify */ = {
+		3CE45043236E5CEC002AFA35 /* Safeify */ = {
 			isa = PBXGroup;
 			children = (
-				3C7D54EB236E172F0038DF9B /* GoogleService-Info.plist */,
-				3CF56AA6236E07B800459C90 /* AppDelegate.swift */,
-				3CF56AA8236E07B800459C90 /* SceneDelegate.swift */,
-				3C2E44FA236E525E0010BA86 /* Incident Report */,
-				3CA85EBE236E4F88009761E7 /* Incident List */,
-				3CA85EB1236E35C0009761E7 /* Incident Detail */,
-				3C7D54ED236E193E0038DF9B /* DataTypes.swift */,
-				3CF56AAC236E07B800459C90 /* Main.storyboard */,
-				3CF56AAF236E07BB00459C90 /* Assets.xcassets */,
-				3CA85EAB236E2F54009761E7 /* google-logo.png */,
-				3CA85EAD236E2FF8009761E7 /* google-logo-white.png */,
-				3CA85EB8236E4351009761E7 /* stream_img.jpg */,
-				3CF56AB1236E07BB00459C90 /* LaunchScreen.storyboard */,
-				3CF56AB4236E07BB00459C90 /* Info.plist */,
+				3CE45044236E5CEC002AFA35 /* AppDelegate.swift */,
+				3CE45046236E5CEC002AFA35 /* SceneDelegate.swift */,
+				3CE4505E236E5D5D002AFA35 /* google-logo-white.png */,
+				3CE45059236E5D5D002AFA35 /* google-logo.png */,
+				3CE45071236E5D85002AFA35 /* DataTypes.swift */,
+				3CE4505A236E5D5D002AFA35 /* Incident Detail */,
+				3CE4505F236E5D5D002AFA35 /* Incident List */,
+				3CE45062236E5D5D002AFA35 /* Incident Report */,
+				3CE45058236E5D5D002AFA35 /* stream_img.jpg */,
+				3CE4504A236E5CEC002AFA35 /* Main.storyboard */,
+				3CE4504D236E5CEE002AFA35 /* Assets.xcassets */,
+				3CE4504F236E5CEE002AFA35 /* LaunchScreen.storyboard */,
+				3CE45052236E5CEE002AFA35 /* Info.plist */,
 			);
 			path = Safeify;
 			sourceTree = "<group>";
 		};
-		77DB9FD70D93296FE3B718E6 /* Pods */ = {
+		3CE4505A236E5D5D002AFA35 /* Incident Detail */ = {
 			isa = PBXGroup;
 			children = (
-				39B083E0AE3ED7448041AFE3 /* Pods-Safeify.debug.xcconfig */,
-				CB3733BA7A5341526CBE1157 /* Pods-Safeify.release.xcconfig */,
+				3CE4505B236E5D5D002AFA35 /* IncidentDetailImageTableViewCell.swift */,
+				3CE4505C236E5D5D002AFA35 /* IncidentDetailDescriptionTableViewCell.swift */,
+				3CE4505D236E5D5D002AFA35 /* IncidentDetailViewController.swift */,
 			);
-			path = Pods;
+			path = "Incident Detail";
 			sourceTree = "<group>";
 		};
-		A97395709A17BFD942657E2B /* Frameworks */ = {
+		3CE4505F236E5D5D002AFA35 /* Incident List */ = {
 			isa = PBXGroup;
 			children = (
-				1E5A6D9217C054EA386F07F5 /* Pods_Safeify.framework */,
+				3CE45060236E5D5D002AFA35 /* IncidentListViewController.swift */,
+				3CE45061236E5D5D002AFA35 /* IncidentListTableViewCell.swift */,
 			);
-			name = Frameworks;
+			path = "Incident List";
+			sourceTree = "<group>";
+		};
+		3CE45062236E5D5D002AFA35 /* Incident Report */ = {
+			isa = PBXGroup;
+			children = (
+				3CE45063236E5D5D002AFA35 /* IncidentReportTextInputTableViewCell.swift */,
+				3CE45064236E5D5D002AFA35 /* IncidentReportButtonTableViewCell.swift */,
+				3CE45065236E5D5D002AFA35 /* IncidentReportTableViewController.swift */,
+			);
+			path = "Incident Report";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3CF56AA2236E07B800459C90 /* Safeify */ = {
+		3CE45040236E5CEC002AFA35 /* Safeify */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3CF56AB7236E07BB00459C90 /* Build configuration list for PBXNativeTarget "Safeify" */;
+			buildConfigurationList = 3CE45055236E5CEE002AFA35 /* Build configuration list for PBXNativeTarget "Safeify" */;
 			buildPhases = (
-				35D05ADF7AD7253F48649ADC /* [CP] Check Pods Manifest.lock */,
-				3CF56A9F236E07B800459C90 /* Sources */,
-				3CF56AA0236E07B800459C90 /* Frameworks */,
-				3CF56AA1236E07B800459C90 /* Resources */,
-				02CCBE882FE956156FFB092C /* [CP] Copy Pods Resources */,
-				4B0BB5138E7DC0F27842BE54 /* [CP] Embed Pods Frameworks */,
+				3CE4503D236E5CEC002AFA35 /* Sources */,
+				3CE4503E236E5CEC002AFA35 /* Frameworks */,
+				3CE4503F236E5CEC002AFA35 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -171,25 +141,25 @@
 			);
 			name = Safeify;
 			productName = Safeify;
-			productReference = 3CF56AA3236E07B800459C90 /* Safeify.app */;
+			productReference = 3CE45041236E5CEC002AFA35 /* Safeify.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3CF56A9B236E07B800459C90 /* Project object */ = {
+		3CE45039236E5CEC002AFA35 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Jake Chasan";
 				TargetAttributes = {
-					3CF56AA2236E07B800459C90 = {
+					3CE45040236E5CEC002AFA35 = {
 						CreatedOnToolsVersion = 11.2;
 					};
 				};
 			};
-			buildConfigurationList = 3CF56A9E236E07B800459C90 /* Build configuration list for PBXProject "Safeify" */;
+			buildConfigurationList = 3CE4503C236E5CEC002AFA35 /* Build configuration list for PBXProject "Safeify" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -197,126 +167,66 @@
 				en,
 				Base,
 			);
-			mainGroup = 3CF56A9A236E07B800459C90;
-			productRefGroup = 3CF56AA4236E07B800459C90 /* Products */;
+			mainGroup = 3CE45038236E5CEC002AFA35;
+			productRefGroup = 3CE45042236E5CEC002AFA35 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3CF56AA2236E07B800459C90 /* Safeify */,
+				3CE45040236E5CEC002AFA35 /* Safeify */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3CF56AA1236E07B800459C90 /* Resources */ = {
+		3CE4503F236E5CEC002AFA35 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CA85EB9236E4351009761E7 /* stream_img.jpg in Resources */,
-				3CF56AB3236E07BB00459C90 /* LaunchScreen.storyboard in Resources */,
-				3C7D54EC236E172F0038DF9B /* GoogleService-Info.plist in Resources */,
-				3CF56AB0236E07BB00459C90 /* Assets.xcassets in Resources */,
-				3CA85EAE236E2FF8009761E7 /* google-logo-white.png in Resources */,
-				3CA85EAC236E2F54009761E7 /* google-logo.png in Resources */,
-				3CF56AAE236E07B800459C90 /* Main.storyboard in Resources */,
+				3CE45051236E5CEE002AFA35 /* LaunchScreen.storyboard in Resources */,
+				3CE45066236E5D5D002AFA35 /* stream_img.jpg in Resources */,
+				3CE4504E236E5CEE002AFA35 /* Assets.xcassets in Resources */,
+				3CE4506B236E5D5D002AFA35 /* google-logo-white.png in Resources */,
+				3CE45067236E5D5D002AFA35 /* google-logo.png in Resources */,
+				3CE4504C236E5CEC002AFA35 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		02CCBE882FE956156FFB092C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Safeify/Pods-Safeify-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Safeify/Pods-Safeify-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Safeify/Pods-Safeify-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		35D05ADF7AD7253F48649ADC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Safeify-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4B0BB5138E7DC0F27842BE54 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Safeify/Pods-Safeify-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Safeify/Pods-Safeify-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Safeify/Pods-Safeify-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		3CF56A9F236E07B800459C90 /* Sources */ = {
+		3CE4503D236E5CEC002AFA35 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CA85EBB236E43BA009761E7 /* IncidentDetailImageTableViewCell.swift in Sources */,
-				3C7D54EE236E193E0038DF9B /* DataTypes.swift in Sources */,
-				3CF56AA7236E07B800459C90 /* AppDelegate.swift in Sources */,
-				3C2E4500236E57740010BA86 /* IncidentReportTextInputTableViewCell.swift in Sources */,
-				3CA85EAA236E1F8E009761E7 /* IncidentListTableViewCell.swift in Sources */,
-				3CA85EB3236E35C0009761E7 /* IncidentDetailViewController.swift in Sources */,
-				3C2E44FC236E52830010BA86 /* IncidentReportTableViewController.swift in Sources */,
-				3CA85EB7236E35F7009761E7 /* IncidentDetailDescriptionTableViewCell.swift in Sources */,
-				3C2E44FE236E56CD0010BA86 /* IncidentReportButtonTableViewCell.swift in Sources */,
-				3C7D54F0236E1B2C0038DF9B /* IncidentListViewController.swift in Sources */,
-				3CF56AA9236E07B800459C90 /* SceneDelegate.swift in Sources */,
+				3CE45068236E5D5D002AFA35 /* IncidentDetailImageTableViewCell.swift in Sources */,
+				3CE45045236E5CEC002AFA35 /* AppDelegate.swift in Sources */,
+				3CE45047236E5CEC002AFA35 /* SceneDelegate.swift in Sources */,
+				3CE4506D236E5D5D002AFA35 /* IncidentListTableViewCell.swift in Sources */,
+				3CE4506A236E5D5D002AFA35 /* IncidentDetailViewController.swift in Sources */,
+				3CE45070236E5D5D002AFA35 /* IncidentReportTableViewController.swift in Sources */,
+				3CE4506C236E5D5D002AFA35 /* IncidentListViewController.swift in Sources */,
+				3CE45069236E5D5D002AFA35 /* IncidentDetailDescriptionTableViewCell.swift in Sources */,
+				3CE4506F236E5D5D002AFA35 /* IncidentReportButtonTableViewCell.swift in Sources */,
+				3CE4506E236E5D5D002AFA35 /* IncidentReportTextInputTableViewCell.swift in Sources */,
+				3CE45072236E5D85002AFA35 /* DataTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3CF56AAC236E07B800459C90 /* Main.storyboard */ = {
+		3CE4504A236E5CEC002AFA35 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3CF56AAD236E07B800459C90 /* Base */,
+				3CE4504B236E5CEC002AFA35 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		3CF56AB1236E07BB00459C90 /* LaunchScreen.storyboard */ = {
+		3CE4504F236E5CEE002AFA35 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3CF56AB2236E07BB00459C90 /* Base */,
+				3CE45050236E5CEE002AFA35 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -324,7 +234,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3CF56AB5236E07BB00459C90 /* Debug */ = {
+		3CE45053236E5CEE002AFA35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -384,7 +294,7 @@
 			};
 			name = Debug;
 		};
-		3CF56AB6236E07BB00459C90 /* Release */ = {
+		3CE45054236E5CEE002AFA35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -438,9 +348,8 @@
 			};
 			name = Release;
 		};
-		3CF56AB8236E07BB00459C90 /* Debug */ = {
+		3CE45056236E5CEE002AFA35 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39B083E0AE3ED7448041AFE3 /* Pods-Safeify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,17 +358,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.duke.safeify;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.duke.Safeify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = Pods;
 			};
 			name = Debug;
 		};
-		3CF56AB9236E07BB00459C90 /* Release */ = {
+		3CE45057236E5CEE002AFA35 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB3733BA7A5341526CBE1157 /* Pods-Safeify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,36 +375,35 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.duke.safeify;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.duke.Safeify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = Pods;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3CF56A9E236E07B800459C90 /* Build configuration list for PBXProject "Safeify" */ = {
+		3CE4503C236E5CEC002AFA35 /* Build configuration list for PBXProject "Safeify" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3CF56AB5236E07BB00459C90 /* Debug */,
-				3CF56AB6236E07BB00459C90 /* Release */,
+				3CE45053236E5CEE002AFA35 /* Debug */,
+				3CE45054236E5CEE002AFA35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3CF56AB7236E07BB00459C90 /* Build configuration list for PBXNativeTarget "Safeify" */ = {
+		3CE45055236E5CEE002AFA35 /* Build configuration list for PBXNativeTarget "Safeify" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3CF56AB8236E07BB00459C90 /* Debug */,
-				3CF56AB9236E07BB00459C90 /* Release */,
+				3CE45056236E5CEE002AFA35 /* Debug */,
+				3CE45057236E5CEE002AFA35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3CF56A9B236E07B800459C90 /* Project object */;
+	rootObject = 3CE45039236E5CEC002AFA35 /* Project object */;
 }

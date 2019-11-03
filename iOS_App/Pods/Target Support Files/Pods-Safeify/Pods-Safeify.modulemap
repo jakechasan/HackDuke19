@@ -1,6 +1,0 @@
-framework module Pods_Safeify {
-  umbrella header "Pods-Safeify-umbrella.h"
-
-  export *
-  module * { export * }
-}
