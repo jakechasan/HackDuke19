@@ -10,9 +10,13 @@ import UIKit
 
 class IncidentReportTableViewController: UITableViewController {
 
+    var newMarker:MarkerItem!;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.newMarker = MarkerItem(Category: "", Comment: "", Img: "", Lat: 0, Long: 0, Timestamp: "", User: "");
+        
         self.tableView.tableFooterView = UIView();
         
         self.tableView.allowsSelection = false;
@@ -28,13 +32,53 @@ class IncidentReportTableViewController: UITableViewController {
         /*
          1. Category
          2. Comment
+         3. Photo
          */
         
-        return 2;
+        return 3;
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if(indexPath.row == 0) {
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "IncidentReportButtonTableViewCell") as! IncidentReportButtonTableViewCell;
+            
+            cell.cell_title.text = "Incident Category";
+            
+            var value = newMarker.Category;
+            
+            if(value == ""){
+                value = "Select Category";
+            }
+            
+            cell.cell_button.titleLabel?.text = value;
+            
+            
+            cell.buttonTappedAction = {
+                let actionSheet = UIAlertController(title: "Select Category", message: nil, preferredStyle: .actionSheet);
+                
+                for type in Data.types {
+                    let action = UIAlertAction(title: type.key, style: .default) { (action) in
+                        self.newMarker.Category = type.key;
+                    };
+                    
+                    action.setValue((self.newMarker.Category == type.key), forKey: "checked")
+                    
+                    actionSheet.addAction(action);
+                }
+                
+                actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil));
+                
+                if let popoverController = actionSheet.popoverPresentationController {
+                    popoverController.sourceView = cell;
+                    popoverController.sourceRect = cell.bounds;
+                }
+                
+                self.present(actionSheet, animated: true, completion: nil);
+            }
+            
+            return cell;
+        }
+        else if(indexPath.row == 1) {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "IncidentReportTextInputTableViewCell") as! IncidentReportTextInputTableViewCell;
             
             cell.cell_titleLabel.text = "Comment";
@@ -42,7 +86,7 @@ class IncidentReportTableViewController: UITableViewController {
             
             return cell;
         }
-        else if(indexPath.row == 1) {
+        else if(indexPath.row == 2) {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "IncidentReportButtonTableViewCell") as! IncidentReportButtonTableViewCell;
             
             cell.buttonTappedAction = {

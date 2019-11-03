@@ -11,10 +11,19 @@ import UIKit
 class IncidentReportButtonTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cell_title: UILabel!
+    @IBOutlet weak var cell_button: UIButton!
     
     var buttonTappedAction:(()->())!;
     
     @IBAction func button_tapped(_ sender: UIButton) {
         buttonTappedAction();
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse();
+        
+        cell_title.text = "";
+        cell_button.titleLabel?.text = "";
+        buttonTappedAction = nil;
     }
 }

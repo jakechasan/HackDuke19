@@ -81,6 +81,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="cell_button" destination="JUO-Rd-0Vh" id="3ye-eP-m3Q"/>
                                     <outlet property="cell_title" destination="jh5-kz-1s5" id="ggR-86-Kpv"/>
                                 </connections>
                             </tableViewCell>

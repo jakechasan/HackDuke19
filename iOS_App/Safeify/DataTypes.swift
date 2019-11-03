@@ -29,18 +29,20 @@ enum Icon: String {
 }
 
 class Data {
+    static let types:[String:Icon] = [
+        "Plumbing Fault":Icon.water,
+        "Electric Fault":Icon.energy,
+        "Ground Fault":Icon.earth,
+        "Structural Fault":Icon.structure,
+        "Biohazard":Icon.biohazard,
+        "Fire Hazard":Icon.fire,
+        "Other":Icon.other
+    ];
+    
     static var username = "jakechasan";
     
     static func getImageForData(_ item:MarkerItem)->Icon{
-        let types:[String:Icon] = [
-            "Plumbing Fault":Icon.water,
-            "Electric Fault":Icon.energy,
-            "Ground Fault":Icon.earth,
-            "Structural Fault":Icon.structure,
-            "Biohazard":Icon.biohazard,
-            "Fire Hazard":Icon.fire,
-            "Other":Icon.other
-        ];
+       
         
         return types[item.Category] ?? Icon.other;
     }
