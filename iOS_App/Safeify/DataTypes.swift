@@ -6,9 +6,10 @@
 //  Copyright © 2019 Jake Chasan. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Firebase
 import FirebaseDatabase
+import FirebaseStorage
 
 struct MarkerItem: Codable {
     var Category: String
@@ -52,7 +53,14 @@ class Data {
     ];
     
     static var username = "jakechasan";
-  
+    static func uploadImg(image:UIImage){
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let mountainImagesRef = storageRef.child("images/mountains.jpg")
+        let data = Data()
+
+    }
+    
     static func startAFire() {
         var ref: DatabaseReference!
         
