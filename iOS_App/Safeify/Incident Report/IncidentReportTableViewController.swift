@@ -145,6 +145,7 @@ class IncidentReportTableViewController: UITableViewController {
         else if(indexPath.row == 3) {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "IncidentReportSelectImageTableViewCell") as! IncidentReportSelectImageTableViewCell;
             
+            cell.cell_imageStatus.alpha = 0.0;
             cell_selectImage = cell;
             
             return cell;
@@ -217,6 +218,7 @@ extension IncidentReportTableViewController:UIImagePickerControllerDelegate {
                     self.cell_selectImage!.imageView!.image = image;
                     
                     self.cell_selectImage?.setNeedsLayout();
+                    self.cell_selectImage?.cell_imageStatus.alpha = 1.0;
                     
                     AppData.uploadImg(image: image, filename: newURL, callback: { url in
                         self.newMarker.Img = url;

@@ -11,10 +11,12 @@ import UIKit
 class IncidentReportSelectImageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cell_imageView: UIImageView!
+    @IBOutlet weak var cell_imageStatus: UIImageView!
     
     override func prepareForReuse() {
         super.prepareForReuse();
         
         cell_imageView.image = nil;
+        cell_imageStatus.alpha = 0.0;
     }
 }
