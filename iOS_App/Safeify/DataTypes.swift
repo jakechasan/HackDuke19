@@ -9,6 +9,7 @@
 import Foundation
 import Firebase
 import FirebaseDatabase
+import FirebaseStorage
 
 struct MarkerItem: Codable {
     var Category: String
@@ -52,6 +53,29 @@ class AppData {
     ];
     
     static var username = "jakechasan";
+    
+    static func uploadImg(image:UIImage){
+      let storage = Storage.storage()
+      let storageRef = storage.reference()
+    let riversRef = storageRef.child("images/rivers.png")
+        guard let data = image.pngData() else { return  };
+        
+ let uploadTask = riversRef.putData(data, metadata: nil) { (metadata, error) in
+        guard let metadata = metadata else {
+          // Uh-oh, an error occurred!
+          return
+        }
+        // Metadata contains file metadata such as size, content-type.
+        let size = metadata.size
+        // You can also access to download URL after upload.
+        riversRef.downloadURL { (url, error) in
+          guard let downloadURL = url else {
+            // Uh-oh, an error occurred!
+            return
+          }
+        }
+
+        }}
   
     static func uploadNewMarker(marker: MarkerItem){
         var ref: DatabaseReference!;
