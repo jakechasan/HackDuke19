@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1DD9982BCFE36D5F61BFCA1C /* Pods_Safeify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41EFA14307AB5BD8EB80CE22 /* Pods_Safeify.framework */; };
+		3C0ED188236E970900E9ECA9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0ED187236E970900E9ECA9 /* CoreLocation.framework */; };
 		3CE45045236E5CEC002AFA35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE45044236E5CEC002AFA35 /* AppDelegate.swift */; };
 		3CE45047236E5CEC002AFA35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE45046236E5CEC002AFA35 /* SceneDelegate.swift */; };
 		3CE4504C236E5CEC002AFA35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE4504A236E5CEC002AFA35 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C0ED187236E970900E9ECA9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3CE45041236E5CEC002AFA35 /* Safeify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Safeify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE45044236E5CEC002AFA35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CE45046236E5CEC002AFA35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C0ED188236E970900E9ECA9 /* CoreLocation.framework in Frameworks */,
 				1DD9982BCFE36D5F61BFCA1C /* Pods_Safeify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +152,7 @@
 		F74F7C2B26F072BE5CD31DE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C0ED187236E970900E9ECA9 /* CoreLocation.framework */,
 				41EFA14307AB5BD8EB80CE22 /* Pods_Safeify.framework */,
 			);
 			name = Frameworks;

@@ -12,6 +12,7 @@ import MapKit
 class IncidentListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    var locationManager:CLLocationManager!;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,16 +23,26 @@ class IncidentListViewController: UIViewController {
         let refreshControl = UIRefreshControl();
         tableView.refreshControl = refreshControl;
         refreshControl.addTarget(self, action: #selector(refreshIncidentData(_:)), for: .valueChanged);
+        
+        locationManager = CLLocationManager();
+        locationManager.requestWhenInUseAuthorization();
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
         
+        AppData.pullFromCloud {
+            self.tableView.reloadData();
+        };
+        
         self.tableView.reloadData();
     }
     
     @objc func refreshIncidentData(_ sender:UIRefreshControl){
-        self.tableView.reloadData();
+        AppData.pullFromCloud {
+            self.tableView.reloadData();
+        };
+        
         sender.endRefreshing();
     }
     

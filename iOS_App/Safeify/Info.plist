@@ -22,6 +22,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Camera used to take photos.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Location is used for updating the location of a photo</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Photo library used to upload photos.</string>
 	<key>UIApplicationSceneManifest</key>

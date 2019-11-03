@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import CoreLocation
 
 class IncidentReportTableViewController: UITableViewController {
 
+    var locationManager:CLLocationManager!;
+    
     var newMarker:MarkerItem!;
     
     var cell_comment:IncidentReportTextInputTableViewCell?;
@@ -23,6 +26,11 @@ class IncidentReportTableViewController: UITableViewController {
         self.tableView.tableFooterView = UIView();
         
         self.tableView.allowsSelection = false;
+        
+        locationManager = CLLocationManager();
+        locationManager.delegate = self;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        locationManager.startUpdatingLocation();
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -210,5 +218,14 @@ extension IncidentReportTableViewController:UIImagePickerControllerDelegate {
                 }
             }
         }
+    }
+}
+
+extension IncidentReportTableViewController:CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        newMarker.Lat = locations.first!.coordinate.latitude;
+        newMarker.Long = locations.first!.coordinate.longitude;
+        
+        manager.stopUpdatingLocation();
     }
 }

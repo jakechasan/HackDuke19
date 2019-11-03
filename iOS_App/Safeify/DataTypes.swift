@@ -102,7 +102,7 @@ class AppData {
         return types[item.Category] ?? Icon.other;
     }
     
-    static func pullFromCloud(){
+    static func pullFromCloud(_ callback: @escaping ()->()){
         var ref: DatabaseReference!;
 
         ref = Database.database().reference();
@@ -115,8 +115,8 @@ class AppData {
                 
                 print("Number of items from the cloud: \(number)");
                 
-                for i in 0..<number {
-                    let name = values[i] as! [String:Any];
+                for value in values {
+                    let name = value as! [String:Any];
                     
                     let comment = name["Comment"] as! String;
                     let category = name["Category"] as! String;
@@ -132,6 +132,8 @@ class AppData {
                 }
                 
                 print("Number of items loaded: \(markers.count)");
+                
+                callback();
             }
             else{
                 print("there has been an error");
