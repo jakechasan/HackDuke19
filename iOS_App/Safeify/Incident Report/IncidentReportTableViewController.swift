@@ -115,15 +115,21 @@ class IncidentReportTableViewController: UITableViewController {
                 
                 let alertController = UIAlertController(title: "Which source would you like to upload from?", message: nil, preferredStyle: .actionSheet);
                 
+                
+                let pickerController =  UIImagePickerController();
+                pickerController.delegate = self;
+                
                 let action_takePhoto = UIAlertAction(title: "Take Photo with Camera", style: .default, handler: { (action) in
-                    
+                    pickerController.sourceType = .camera;
+
+                    self.present(pickerController, animated: true, completion: nil);
                 });
                 action_takePhoto.setValue(UIImage(systemName: "camera"), forKey: "image");
                 alertController.addAction(action_takePhoto);
                 
                 let action_photoLibrary = UIAlertAction(title: "Select from Photo Library", style: .default, handler: { (action) in
-                    var pickerController = UIImagePickerController();
-                    pickerController.delegate = self;
+                    pickerController.sourceType = .photoLibrary;
+                    
                     self.present(pickerController, animated: true, completion: nil);
                 });
                 action_photoLibrary.setValue(UIImage(systemName: "photo.on.rectangle"), forKey: "image");

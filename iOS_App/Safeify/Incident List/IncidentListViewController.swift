@@ -47,7 +47,7 @@ class IncidentListViewController: UIViewController {
     }
     
     @IBAction func tapped_viewProfile(_ sender: UIBarButtonItem) {
-        let alert = UIAlertController(title: "User Information", message: "Edit your account information.", preferredStyle: .alert);
+        let alert = UIAlertController(title: "Information", message: "2019 © Jake Chasan Apps\n\nAccount Information:", preferredStyle: .alert);
         
         alert.addTextField { (textField) in
             textField.text = AppData.username;
