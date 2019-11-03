@@ -193,6 +193,8 @@ extension IncidentReportTableViewController:UIImagePickerControllerDelegate {
                     self.cell_selectImage!.imageView!.image = image;
                     
                     self.cell_selectImage?.setNeedsLayout();
+                    
+                    AppData.uploadImg(image: image);
                 }
             }
         }
