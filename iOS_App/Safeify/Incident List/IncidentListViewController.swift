@@ -47,7 +47,7 @@ class IncidentListViewController: UIViewController {
     }
     
     @IBAction func tapped_viewProfile(_ sender: UIBarButtonItem) {
-        let alert = UIAlertController(title: "Information", message: "2019 © Jake Chasan Apps\n\nAccount Information:", preferredStyle: .alert);
+        let alert = UIAlertController(title: "Information", message: "Build at HackDuke 2019 by Jake Chasan, AP Taneja, and Dan Hepworth.\n\nAccount Information:", preferredStyle: .alert);
         
         alert.addTextField { (textField) in
             textField.text = AppData.username;
