@@ -94,6 +94,7 @@ class IncidentReportTableViewController: UITableViewController {
             
             cell.cell_titleLabel.text = "Comment";
             cell.textField.text = "";
+            cell.textField.addTarget(self, action: #selector(self.commentChanged(_:)), for: UIControl.Event.editingChanged);
             
             self.cell_comment = cell;
             
@@ -139,6 +140,10 @@ class IncidentReportTableViewController: UITableViewController {
         }
     }
     
+    @objc func commentChanged(_ textField: UITextField) {
+        newMarker.Comment = textField.text!;
+    }
+    
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if(indexPath.row == 0){
             cell.becomeFirstResponder();
@@ -149,14 +154,17 @@ class IncidentReportTableViewController: UITableViewController {
         
         if(newMarker.Category == ""){
             let alertController = UIAlertController(title: "Please select a category", message: nil, preferredStyle: .alert);
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil));
             self.present(alertController, animated: true, completion: nil);
         }
         else if(newMarker.Comment == ""){
             let alertController = UIAlertController(title: "Please enter a comment", message: nil, preferredStyle: .alert);
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil));
             self.present(alertController, animated: true, completion: nil);
         }
         else if(newMarker.Img == ""){
             let alertController = UIAlertController(title: "Please select an image", message: nil, preferredStyle: .alert);
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil));
             self.present(alertController, animated: true, completion: nil);
         }
         else{
@@ -186,6 +194,8 @@ extension IncidentReportTableViewController:UINavigationControllerDelegate {
 extension IncidentReportTableViewController:UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
+        let newURL = UUID().uuidString;
+        
         self.dismiss(animated: true) {
             if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
                 DispatchQueue.main.async {
@@ -194,7 +204,9 @@ extension IncidentReportTableViewController:UIImagePickerControllerDelegate {
                     
                     self.cell_selectImage?.setNeedsLayout();
                     
-                    AppData.uploadImg(image: image);
+                    AppData.uploadImg(image: image, filename: newURL, callback: { url in
+                        self.newMarker.Img = url;
+                    });
                 }
             }
         }

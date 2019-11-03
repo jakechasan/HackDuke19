@@ -8,12 +8,8 @@
 
 import UIKit
 import MapKit
-import Firebase
-import FirebaseDatabase
 
 class IncidentListViewController: UIViewController {
-    
-//    var ref: DatabaseReference!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,13 +19,20 @@ class IncidentListViewController: UIViewController {
         tableView.delegate = self;
         tableView.dataSource = self;
         
-        AppData.startAFire();
+        let refreshControl = UIRefreshControl();
+        tableView.refreshControl = refreshControl;
+        refreshControl.addTarget(self, action: #selector(refreshIncidentData(_:)), for: .valueChanged);
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
         
         self.tableView.reloadData();
+    }
+    
+    @objc func refreshIncidentData(_ sender:UIRefreshControl){
+        self.tableView.reloadData();
+        sender.endRefreshing();
     }
     
     @IBAction func tapped_viewProfile(_ sender: UIBarButtonItem) {
@@ -63,7 +66,7 @@ extension IncidentListViewController:UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let incidentDetail = storyboard?.instantiateViewController(withIdentifier: "IncidentDetailViewController") as! IncidentDetailViewController;
-        incidentDetail.data = AppData.getData()[indexPath.row];
+        incidentDetail.data = AppData.markers[indexPath.row];
         self.navigationController?.pushViewController(incidentDetail, animated: true);
         
         self.tableView.deselectRow(at: indexPath, animated: true);
@@ -73,23 +76,23 @@ extension IncidentListViewController:UITableViewDelegate {
 extension IncidentListViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return AppData.getData().count;
+        return AppData.markers.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "IncidentListTableViewCell") as! IncidentListTableViewCell;
         
-        cell.imageView_icon.image = UIImage(named: AppData.getImageForData(AppData.getData()[indexPath.row]).rawValue);
+        cell.imageView_icon.image = UIImage(named: AppData.getImageForData(AppData.markers[indexPath.row]).rawValue);
         
-        cell.textView_title.text = AppData.getData()[indexPath.row].Category;
-        cell.textView_description.text = AppData.getData()[indexPath.row].Comment;
+        cell.textView_title.text = AppData.markers[indexPath.row].Category;
+        cell.textView_description.text = AppData.markers[indexPath.row].Comment;
         
         var span = MKCoordinateSpan();
         span.latitudeDelta = 0.5;
         span.longitudeDelta = 0.5;
         
-        let coordinate = CLLocationCoordinate2D(latitude: AppData.getData()[indexPath.row].Lat, longitude: AppData.getData()[indexPath.row].Long);
+        let coordinate = CLLocationCoordinate2D(latitude: AppData.markers[indexPath.row].Lat, longitude: AppData.markers[indexPath.row].Long);
         
         let region = MKCoordinateRegion(center: coordinate, span: span);
         cell.mapView.setRegion(region, animated: false);

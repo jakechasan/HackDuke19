@@ -52,26 +52,30 @@ class AppData {
         "Other":Icon.other
     ];
     
+    static var markers:[MarkerItem] = [];
+    
     static var username = "jakechasan";
     
-    static func uploadImg(image:UIImage){
+    static func uploadImg(image:UIImage, filename:String, callback: @escaping (String)->()){
         let storage = Storage.storage()
         let storageRef = storage.reference()
-        let riversRef = storageRef.child("images/rivers2.png")
+        let riversRef = storageRef.child("images/\(filename).jpeg")
         
-        guard let data = image.pngData() else { return  };
+        guard let data = image.jpegData(compressionQuality: 0.2) else { return  };
         
-        let uploadTask = riversRef.putData(data, metadata: nil) { (metadata, error) in
-            guard let metadata = metadata else {
+        _ = riversRef.putData(data, metadata: nil) { (metadata, error) in
+            guard metadata != nil else {
                 print(error.debugDescription);
                 
                 return
             }
-            // Metadata contains file metadata such as size, content-type.
-            let size = metadata.size
+            
             // You can also access to download URL after upload.
             riversRef.downloadURL { (url, error) in
-                guard let downloadURL = url else {
+                
+                callback(url!.absoluteString);
+                
+                guard url != nil else {
                     // Uh-oh, an error occurred!
                     return
                 }
@@ -84,7 +88,7 @@ class AppData {
         
         ref = Database.database().reference();
         
-        ref.child("M2").setValue(
+        ref.child("\(markers.count)").setValue(
             ["Category":marker.Category,
              "Comment":marker.Comment,
              "Img": marker.Img,
@@ -94,36 +98,44 @@ class AppData {
              "User":AppData.username]);
     }
     
-    static func startAFire() {
-        var ref: DatabaseReference!
-        
-        ref = Database.database().reference()
-              ref.child("M2").observeSingleEvent(of: .value) { ( snapshot) in
-                  let name = snapshot.value as? [String:Any]
-                  print(name)
-                  
-                  let comment = name!["Comment"] as! String;
-                  let category = name!["Category"] as! String;
-                  let img = name!["Img"] as! String;
-                  let lat = name!["Lat"] as! Double;
-                  let long = name!["Lon"] as! Double;
-                  let timestamp = name!["Timestamp"] as! String;
-                  let user = name!["User"] as! String;
-                  
-                  let newMarker = MarkerItem(Category: category, Comment: comment, Img: img, Lat: lat, Long: long, Timestamp: timestamp, User: user)
-              }
-    }
     static func getImageForData(_ item:MarkerItem)->Icon{
-       
-        
         return types[item.Category] ?? Icon.other;
     }
     
-    static func getData()-> [MarkerItem] {
-        let sampleData:[MarkerItem] = [
-            MarkerItem(Category: "Electric Fault", Comment: "This utility pole is on fire!", Img: "https://news.images.itv.com/image/file/908885/stream_img.jpg", Lat: 78.9382, Long: 36.0014, Timestamp: "2016-11-01T21:10:56Z", User: "jakechasan")
-        ]
-        
-        return sampleData;
+    static func pullFromCloud(){
+        var ref: DatabaseReference!;
+
+        ref = Database.database().reference();
+        ref.observeSingleEvent(of: .value) { ( snapshot) in
+
+            markers.removeAll();
+            
+            if let values = snapshot.value as? [Any] {
+                let number = values.count;
+                
+                print("Number of items from the cloud: \(number)");
+                
+                for i in 0..<number {
+                    let name = values[i] as! [String:Any];
+                    
+                    let comment = name["Comment"] as! String;
+                    let category = name["Category"] as! String;
+                    let img = name["Img"] as! String;
+                    let lat = name["Lat"] as! Double;
+                    let long = name["Lon"] as! Double;
+                    let timestamp = name["Timestamp"] as! String;
+                    let user = name["User"] as! String;
+
+                    let tmpMarker = MarkerItem(Category: category, Comment: comment, Img: img, Lat: lat, Long: long, Timestamp: timestamp, User: user);
+
+                    markers.append(tmpMarker);
+                }
+                
+                print("Number of items loaded: \(markers.count)");
+            }
+            else{
+                print("there has been an error");
+            }
+        }
     }
 }
