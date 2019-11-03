@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3C2E44FC236E52830010BA86 /* IncidentReportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2E44FB236E52830010BA86 /* IncidentReportTableViewController.swift */; };
+		3C2E44FE236E56CD0010BA86 /* IncidentReportButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2E44FD236E56CD0010BA86 /* IncidentReportButtonTableViewCell.swift */; };
+		3C2E4500236E57740010BA86 /* IncidentReportTextInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2E44FF236E57740010BA86 /* IncidentReportTextInputTableViewCell.swift */; };
 		3C7D54EC236E172F0038DF9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C7D54EB236E172F0038DF9B /* GoogleService-Info.plist */; };
 		3C7D54EE236E193E0038DF9B /* DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7D54ED236E193E0038DF9B /* DataTypes.swift */; };
 		3C7D54F0236E1B2C0038DF9B /* IncidentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7D54EF236E1B2C0038DF9B /* IncidentListViewController.swift */; };
@@ -18,7 +20,6 @@
 		3CA85EB7236E35F7009761E7 /* IncidentDetailDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA85EB6236E35F7009761E7 /* IncidentDetailDescriptionTableViewCell.swift */; };
 		3CA85EB9236E4351009761E7 /* stream_img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3CA85EB8236E4351009761E7 /* stream_img.jpg */; };
 		3CA85EBB236E43BA009761E7 /* IncidentDetailImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA85EBA236E43BA009761E7 /* IncidentDetailImageTableViewCell.swift */; };
-		3CA85EBD236E43E9009761E7 /* IncidentDetailImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA85EBC236E43E8009761E7 /* IncidentDetailImageTableViewCell.swift */; };
 		3CF56AA7236E07B800459C90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF56AA6236E07B800459C90 /* AppDelegate.swift */; };
 		3CF56AA9236E07B800459C90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF56AA8236E07B800459C90 /* SceneDelegate.swift */; };
 		3CF56AAE236E07B800459C90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF56AAC236E07B800459C90 /* Main.storyboard */; };
@@ -31,6 +32,8 @@
 		1E5A6D9217C054EA386F07F5 /* Pods_Safeify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Safeify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B083E0AE3ED7448041AFE3 /* Pods-Safeify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safeify.debug.xcconfig"; path = "Target Support Files/Pods-Safeify/Pods-Safeify.debug.xcconfig"; sourceTree = "<group>"; };
 		3C2E44FB236E52830010BA86 /* IncidentReportTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentReportTableViewController.swift; sourceTree = "<group>"; };
+		3C2E44FD236E56CD0010BA86 /* IncidentReportButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentReportButtonTableViewCell.swift; sourceTree = "<group>"; };
+		3C2E44FF236E57740010BA86 /* IncidentReportTextInputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentReportTextInputTableViewCell.swift; sourceTree = "<group>"; };
 		3C7D54EB236E172F0038DF9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3C7D54ED236E193E0038DF9B /* DataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypes.swift; sourceTree = "<group>"; };
 		3C7D54EF236E1B2C0038DF9B /* IncidentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentListViewController.swift; sourceTree = "<group>"; };
@@ -41,7 +44,6 @@
 		3CA85EB6236E35F7009761E7 /* IncidentDetailDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentDetailDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		3CA85EB8236E4351009761E7 /* stream_img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stream_img.jpg; sourceTree = "<group>"; };
 		3CA85EBA236E43BA009761E7 /* IncidentDetailImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentDetailImageTableViewCell.swift; sourceTree = "<group>"; };
-		3CA85EBC236E43E8009761E7 /* IncidentDetailImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncidentDetailImageTableViewCell.swift; sourceTree = "<group>"; };
 		3CF56AA3236E07B800459C90 /* Safeify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Safeify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF56AA6236E07B800459C90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CF56AA8236E07B800459C90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				3C2E44FB236E52830010BA86 /* IncidentReportTableViewController.swift */,
+				3C2E44FF236E57740010BA86 /* IncidentReportTextInputTableViewCell.swift */,
+				3C2E44FD236E56CD0010BA86 /* IncidentReportButtonTableViewCell.swift */,
 			);
 			path = "Incident Report";
 			sourceTree = "<group>";
@@ -78,7 +82,6 @@
 				3CA85EB2236E35C0009761E7 /* IncidentDetailViewController.swift */,
 				3CA85EBA236E43BA009761E7 /* IncidentDetailImageTableViewCell.swift */,
 				3CA85EB6236E35F7009761E7 /* IncidentDetailDescriptionTableViewCell.swift */,
-				3CA85EBC236E43E8009761E7 /* IncidentDetailImageTableViewCell.swift */,
 			);
 			path = "Incident Detail";
 			sourceTree = "<group>";
@@ -288,11 +291,12 @@
 				3CA85EBB236E43BA009761E7 /* IncidentDetailImageTableViewCell.swift in Sources */,
 				3C7D54EE236E193E0038DF9B /* DataTypes.swift in Sources */,
 				3CF56AA7236E07B800459C90 /* AppDelegate.swift in Sources */,
+				3C2E4500236E57740010BA86 /* IncidentReportTextInputTableViewCell.swift in Sources */,
 				3CA85EAA236E1F8E009761E7 /* IncidentListTableViewCell.swift in Sources */,
 				3CA85EB3236E35C0009761E7 /* IncidentDetailViewController.swift in Sources */,
 				3C2E44FC236E52830010BA86 /* IncidentReportTableViewController.swift in Sources */,
 				3CA85EB7236E35F7009761E7 /* IncidentDetailDescriptionTableViewCell.swift in Sources */,
-				3CA85EBD236E43E9009761E7 /* IncidentDetailImageTableViewCell.swift in Sources */,
+				3C2E44FE236E56CD0010BA86 /* IncidentReportButtonTableViewCell.swift in Sources */,
 				3C7D54F0236E1B2C0038DF9B /* IncidentListViewController.swift in Sources */,
 				3CF56AA9236E07B800459C90 /* SceneDelegate.swift in Sources */,
 			);
