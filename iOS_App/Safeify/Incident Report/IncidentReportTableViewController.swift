@@ -12,6 +12,8 @@ class IncidentReportTableViewController: UITableViewController {
 
     var newMarker:MarkerItem!;
     
+    var cell_comment:IncidentReportTextInputTableViewCell?;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +22,12 @@ class IncidentReportTableViewController: UITableViewController {
         self.tableView.tableFooterView = UIView();
         
         self.tableView.allowsSelection = false;
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated);
+        
+        _ = cell_comment?.becomeFirstResponder();
     }
 
     // MARK: - Table view data source
@@ -59,6 +67,8 @@ class IncidentReportTableViewController: UITableViewController {
                         self.newMarker.Category = type;
                         
                         cell.cell_button.setTitle(self.newMarker.Category, for: .normal);
+                        
+                        _ = self.cell_comment?.becomeFirstResponder();
                     };
                     
                     action.setValue((self.newMarker.Category == type), forKey: "checked")
@@ -84,14 +94,19 @@ class IncidentReportTableViewController: UITableViewController {
             cell.cell_titleLabel.text = "Comment";
             cell.textField.text = "";
             
+            self.cell_comment = cell;
+            
             return cell;
         }
         else if(indexPath.row == 2) {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "IncidentReportButtonTableViewCell") as! IncidentReportButtonTableViewCell;
             
             cell.buttonTappedAction = {
-                let alert = UIAlertController(title: "test", message: "msg", preferredStyle: .alert);
-                self.present(alert, animated: true, completion: nil);
+                
+                let pickerController = UIImagePickerController();
+                
+                self.present(pickerController, animated: true, completion: nil);
+                
             }
             
             return cell;
