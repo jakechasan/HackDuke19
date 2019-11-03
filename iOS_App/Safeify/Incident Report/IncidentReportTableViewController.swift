@@ -13,6 +13,7 @@ class IncidentReportTableViewController: UITableViewController {
     var newMarker:MarkerItem!;
     
     var cell_comment:IncidentReportTextInputTableViewCell?;
+    var cell_selectImage:IncidentReportSelectImageTableViewCell?;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +44,7 @@ class IncidentReportTableViewController: UITableViewController {
          3. Photo
          */
         
-        return 3;
+        return 4;
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -103,11 +104,33 @@ class IncidentReportTableViewController: UITableViewController {
             
             cell.buttonTappedAction = {
                 
-                let pickerController = UIImagePickerController();
+                let alertController = UIAlertController(title: "Which source would you like to upload from?", message: nil, preferredStyle: .actionSheet);
                 
-                self.present(pickerController, animated: true, completion: nil);
+                let action_takePhoto = UIAlertAction(title: "Take Photo with Camera", style: .default, handler: { (action) in
+                    
+                });
+                action_takePhoto.setValue(UIImage(systemName: "camera"), forKey: "image");
+                alertController.addAction(action_takePhoto);
                 
+                let action_photoLibrary = UIAlertAction(title: "Select from Photo Library", style: .default, handler: { (action) in
+                    var pickerController = UIImagePickerController();
+                    pickerController.delegate = self;
+                    self.present(pickerController, animated: true, completion: nil);
+                });
+                action_photoLibrary.setValue(UIImage(systemName: "photo.on.rectangle"), forKey: "image");
+                alertController.addAction(action_photoLibrary);
+                
+                alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil));
+                
+                self.present(alertController, animated: true, completion: nil);
             }
+            
+            return cell;
+        }
+        else if(indexPath.row == 3) {
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "IncidentReportSelectImageTableViewCell") as! IncidentReportSelectImageTableViewCell;
+            
+            cell_selectImage = cell;
             
             return cell;
         }
@@ -131,5 +154,24 @@ class IncidentReportTableViewController: UITableViewController {
         
         self.navigationController?.dismiss(animated: true, completion: nil);
     }
+}
+
+extension IncidentReportTableViewController:UINavigationControllerDelegate {
     
+}
+
+extension IncidentReportTableViewController:UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        self.dismiss(animated: true) {
+            if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+                DispatchQueue.main.async {
+                    self.cell_selectImage!.imageView!.contentMode = .scaleAspectFit;
+                    self.cell_selectImage!.imageView!.image = image;
+                    
+                    self.cell_selectImage?.setNeedsLayout();
+                }
+            }
+        }
+    }
 }
