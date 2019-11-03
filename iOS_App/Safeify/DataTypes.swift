@@ -116,19 +116,33 @@ class AppData {
                 print("Number of items from the cloud: \(number)");
                 
                 for value in values {
-                    let name = value as! [String:Any];
-                    
-                    let comment = name["Comment"] as! String;
-                    let category = name["Category"] as! String;
-                    let img = name["Img"] as! String;
-                    let lat = name["Lat"] as! Double;
-                    let long = name["Lon"] as! Double;
-                    let timestamp = name["Timestamp"] as! String;
-                    let user = name["User"] as! String;
-
-                    let tmpMarker = MarkerItem(Category: category, Comment: comment, Img: img, Lat: lat, Long: long, Timestamp: timestamp, User: user);
-
-                    markers.append(tmpMarker);
+                    if let name = value as? [String:Any] {
+                        var tmpMarker = MarkerItem(Category: "", Comment: "", Img: "", Lat: 0, Long: 0, Timestamp: "", User: "");
+                        
+                        if let comment = name["Comment"] as? String {
+                            tmpMarker.Comment = comment;
+                        }
+                        if let category = name["Category"] as? String {
+                            tmpMarker.Category = category;
+                        }
+                        if let img = name["Img"] as? String {
+                            tmpMarker.Img = img;
+                        }
+                        if let lat = name["Lat"] as? Double {
+                            tmpMarker.Lat = lat;
+                        }
+                        if let long = name["Lon"] as? Double {
+                            tmpMarker.Long = long;
+                        }
+                        if let timestamp = name["Timestamp"] as? String {
+                            tmpMarker.Timestamp = timestamp;
+                        }
+                        if let user = name["User"] as? String {
+                            tmpMarker.User = user;
+                        }
+                        
+                        markers.append(tmpMarker);
+                    }
                 }
                 
                 print("Number of items loaded: \(markers.count)");
