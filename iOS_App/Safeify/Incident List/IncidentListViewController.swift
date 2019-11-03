@@ -23,7 +23,7 @@ class IncidentListViewController: UIViewController {
         tableView.delegate = self;
         tableView.dataSource = self;
         
-        Data.startAFire();
+        AppData.startAFire();
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +36,7 @@ class IncidentListViewController: UIViewController {
         let alert = UIAlertController(title: "User Information", message: "Edit your account information.", preferredStyle: .alert);
         
         alert.addTextField { (textField) in
-            textField.text = Data.username;
+            textField.text = AppData.username;
             
             textField.addTarget(self, action: #selector(self.usernameChanged(_:)), for: UIControl.Event.editingChanged);
         }
@@ -46,7 +46,7 @@ class IncidentListViewController: UIViewController {
     }
     
     @objc func usernameChanged(_ textField: UITextField) {
-        Data.username = textField.text!;
+        AppData.username = textField.text!;
     }
     
     @IBAction func tapped_addNewReport(_ sender: UIBarButtonItem) {
@@ -63,7 +63,7 @@ extension IncidentListViewController:UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let incidentDetail = storyboard?.instantiateViewController(withIdentifier: "IncidentDetailViewController") as! IncidentDetailViewController;
-        incidentDetail.data = Data.getData()[indexPath.row];
+        incidentDetail.data = AppData.getData()[indexPath.row];
         self.navigationController?.pushViewController(incidentDetail, animated: true);
         
         self.tableView.deselectRow(at: indexPath, animated: true);
@@ -73,23 +73,23 @@ extension IncidentListViewController:UITableViewDelegate {
 extension IncidentListViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return Data.getData().count;
+        return AppData.getData().count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "IncidentListTableViewCell") as! IncidentListTableViewCell;
         
-        cell.imageView_icon.image = UIImage(named: Data.getImageForData(Data.getData()[indexPath.row]).rawValue);
+        cell.imageView_icon.image = UIImage(named: AppData.getImageForData(AppData.getData()[indexPath.row]).rawValue);
         
-        cell.textView_title.text = Data.getData()[indexPath.row].Category;
-        cell.textView_description.text = Data.getData()[indexPath.row].Comment;
+        cell.textView_title.text = AppData.getData()[indexPath.row].Category;
+        cell.textView_description.text = AppData.getData()[indexPath.row].Comment;
         
         var span = MKCoordinateSpan();
         span.latitudeDelta = 0.5;
         span.longitudeDelta = 0.5;
         
-        let coordinate = CLLocationCoordinate2D(latitude: Data.getData()[indexPath.row].Lat, longitude: Data.getData()[indexPath.row].Long);
+        let coordinate = CLLocationCoordinate2D(latitude: AppData.getData()[indexPath.row].Lat, longitude: AppData.getData()[indexPath.row].Long);
         
         let region = MKCoordinateRegion(center: coordinate, span: span);
         cell.mapView.setRegion(region, animated: false);

@@ -63,7 +63,7 @@ class IncidentReportTableViewController: UITableViewController {
             cell.buttonTappedAction = {
                 let actionSheet = UIAlertController(title: "Select Category", message: nil, preferredStyle: .actionSheet);
                 
-                for type in Data.typesStrings {
+                for type in AppData.typesStrings {
                     let action = UIAlertAction(title: type, style: .default) { (action) in
                         self.newMarker.Category = type;
                         
@@ -146,6 +146,14 @@ class IncidentReportTableViewController: UITableViewController {
     }
     
     @IBAction func tapped_buttonSubmit(_ sender: UIBarButtonItem) {
+        
+        if(newMarker.Category == ""){
+            let alertController = UIAlertController(title: "Please select a category", message: nil, preferredStyle: .alert);
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil));
+            self.present(alertController, animated: true, completion: nil);
+        }
+        
+        AppData.uploadNewMarker(marker: newMarker);
         
         self.navigationController?.dismiss(animated: true, completion: nil);
     }

@@ -6,10 +6,9 @@
 //  Copyright © 2019 Jake Chasan. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import Firebase
 import FirebaseDatabase
-import FirebaseStorage
 
 struct MarkerItem: Codable {
     var Category: String
@@ -31,7 +30,7 @@ enum Icon: String {
     case other = "other"
 }
 
-class Data {
+class AppData {
     static let typesStrings = [
         "Plumbing Fault",
         "Electric Fault",
@@ -53,19 +52,26 @@ class Data {
     ];
     
     static var username = "jakechasan";
-    static func uploadImg(image:UIImage){
-        let storage = Storage.storage()
-        let storageRef = storage.reference()
-        let mountainImagesRef = storageRef.child("images/mountains.jpg")
-        let data = Data()
-
+  
+    static func uploadNewMarker(marker: MarkerItem){
+        var ref: DatabaseReference!;
+        
+        ref = Database.database().reference();
+        
+        ref.child("M2").setValue(
+            ["Category":marker.Category,
+             "Comment":marker.Comment,
+             "Img": marker.Img,
+             "Lat":marker.Lat,
+             "Lon":marker.Long,
+             "Timestamp":marker.Timestamp,
+             "User":AppData.username]);
     }
     
     static func startAFire() {
         var ref: DatabaseReference!
         
         ref = Database.database().reference()
-              ref.child("M2").setValue(["Category":"Fire Hazard", "Comment":"My Mixtape yo gang gang", "Img": "imageaddr","Lat":0.0,"Lon":0.0,"Timestamp":"1997-07-16T19:20+01:00","User":"Aparimeya"])
               ref.child("M2").observeSingleEvent(of: .value) { ( snapshot) in
                   let name = snapshot.value as? [String:Any]
                   print(name)
