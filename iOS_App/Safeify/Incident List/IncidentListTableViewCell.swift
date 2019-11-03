@@ -17,7 +17,7 @@ class IncidentListTableViewCell: UITableViewCell {
     @IBOutlet weak var mapView: MKMapView!
     
     override func prepareForReuse() {
-        self.prepareForReuse();
+        super.prepareForReuse();
         
         imageView?.image = nil;
         textView_title.text = "";
