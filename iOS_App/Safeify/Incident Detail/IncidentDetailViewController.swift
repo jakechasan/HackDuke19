@@ -94,13 +94,14 @@ extension IncidentDetailViewController:UITableViewDataSource {
     1. Incident Type: right detail
     2. Incident Time: right detail
     3. Utility Status: right detail
-    4. Descripton: custom expandable
-    5. Image: custom image cell
+    4. User: right detail
+    5. Descripton: custom expandable
+    6. Image: custom image cell
     */
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 5;
+        return 6;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -140,14 +141,23 @@ extension IncidentDetailViewController:UITableViewDataSource {
             
             return cell;
         }
-        else if (indexPath.row == 3) { //description
+        else if (indexPath.row == 3) { //utility status
+            let cell = UITableViewCell(style: .value1, reuseIdentifier: "nil");
+            
+            cell.textLabel?.text = "Submitted by";
+            
+            cell.detailTextLabel?.text = data.User;
+            
+            return cell;
+        }
+        else if (indexPath.row == 4) { //description
             let cell = tableView.dequeueReusableCell(withIdentifier: "IncidentDetailDescriptionTableViewCell") as! IncidentDetailDescriptionTableViewCell;
             
             cell.textView_description.text = data.Comment;
             
             return cell;
         }
-        else if (indexPath.row == 4) { //image
+        else if (indexPath.row == 5) { //image
             let cell = tableView.dequeueReusableCell(withIdentifier: "IncidentDetailImageTableViewCell") as! IncidentDetailImageTableViewCell;
             
             cell.cell_image.downloadImageFrom(link: data.Img, contentMode: .scaleAspectFit);

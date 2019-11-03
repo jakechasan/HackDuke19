@@ -113,9 +113,9 @@
 		3CE4505A236E5D5D002AFA35 /* Incident Detail */ = {
 			isa = PBXGroup;
 			children = (
+				3CE4505D236E5D5D002AFA35 /* IncidentDetailViewController.swift */,
 				3CE4505B236E5D5D002AFA35 /* IncidentDetailImageTableViewCell.swift */,
 				3CE4505C236E5D5D002AFA35 /* IncidentDetailDescriptionTableViewCell.swift */,
-				3CE4505D236E5D5D002AFA35 /* IncidentDetailViewController.swift */,
 			);
 			path = "Incident Detail";
 			sourceTree = "<group>";
