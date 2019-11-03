@@ -33,11 +33,20 @@ class IncidentListViewController: UIViewController {
     }
     
     @IBAction func tapped_viewProfile(_ sender: UIBarButtonItem) {
-        let alert = UIAlertController(title: "User Information", message: "Username: \(Data.username)", preferredStyle: .alert);
+        let alert = UIAlertController(title: "User Information", message: "Edit your account information.", preferredStyle: .alert);
         
+        alert.addTextField { (textField) in
+            textField.text = Data.username;
+            
+            textField.addTarget(self, action: #selector(self.usernameChanged(_:)), for: UIControl.Event.editingChanged);
+        }
         alert.addAction(UIAlertAction(title: "Done", style: .cancel, handler: nil));
         
         self.present(alert, animated: true, completion: nil);
+    }
+    
+    @objc func usernameChanged(_ textField: UITextField) {
+        Data.username = textField.text!;
     }
     
     @IBAction func tapped_addNewReport(_ sender: UIBarButtonItem) {
