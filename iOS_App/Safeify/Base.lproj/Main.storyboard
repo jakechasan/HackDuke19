@@ -7,6 +7,50 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Report New Incident-->
+        <scene sceneID="Lyp-8p-T4v">
+            <objects>
+                <tableViewController storyboardIdentifier="IncidentReportTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eZX-2n-xpS" customClass="IncidentReportTableViewController" customModule="Safeify" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Fcl-Q0-z3s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FOi-A3-QNP">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FOi-A3-QNP" id="6iH-xV-jI6">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eZX-2n-xpS" id="IUA-Pm-EV5"/>
+                            <outlet property="delegate" destination="eZX-2n-xpS" id="4Kp-0m-kjo"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="nI2-89-GEZ"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Report New Incident" id="T4i-MJ-PKy">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Tt4-kv-KkO">
+                            <connections>
+                                <action selector="tapped_buttonCancel:" destination="eZX-2n-xpS" id="OXv-RU-4GS"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Submit" style="done" id="rYV-5p-7gj">
+                            <connections>
+                                <action selector="tapped_buttonSubmit:" destination="eZX-2n-xpS" id="0gg-so-1LY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJX-DM-zXJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="-1396"/>
+        </scene>
         <!--Latest Incidents-->
         <scene sceneID="jJk-hc-0Ng">
             <objects>
@@ -92,7 +136,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FK5-q0-lTh"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Latest Incidents" id="jof-IO-z1r"/>
+                    <navigationItem key="navigationItem" title="Latest Incidents" id="jof-IO-z1r">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dUd-Ut-lcm">
+                            <connections>
+                                <action selector="tapped_addNewReport:" destination="Uiv-Dk-l7q" id="8sZ-I3-SvG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="E75-nj-GT5" id="vLu-Nw-xid"/>
                     </connections>
@@ -311,6 +361,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6F2-rh-kia" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138" y="129"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZKq-64-6Ie">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KNT-JU-rct" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K5q-8N-nTB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eZX-2n-xpS" kind="relationship" relationship="rootViewController" id="Imp-Pq-ZIG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ms2-S3-PiF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="-1396"/>
         </scene>
     </scenes>
     <resources>

@@ -20,6 +20,14 @@ class IncidentListViewController: UIViewController {
         tableView.dataSource = self;
     }
     
+    @IBAction func tapped_addNewReport(_ sender: UIBarButtonItem) {
+        
+        let viewController = storyboard?.instantiateViewController(identifier: "IncidentReportTableViewController") as! IncidentReportTableViewController;
+        
+        let navigationController = UINavigationController(rootViewController: viewController);
+        
+        self.present(navigationController, animated: true, completion: nil);
+    }
 }
 
 extension IncidentListViewController:UITableViewDelegate {
@@ -29,6 +37,7 @@ extension IncidentListViewController:UITableViewDelegate {
         incidentDetail.data = Data.getData()[indexPath.row];
         self.navigationController?.pushViewController(incidentDetail, animated: true);
         
+        self.tableView.deselectRow(at: indexPath, animated: true);
     }
 }
 
